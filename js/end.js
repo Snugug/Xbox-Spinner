@@ -6,6 +6,7 @@ $('#button').on('click', function(e) {
 
     // Toggle 'Paused' class
     $(this).cls('paused', 'toggle');
+    $('body').cls('paused', 'toggle');
 
     // If animation is paused, add flourish
     if ($(this).cls('paused', 'has')) {
