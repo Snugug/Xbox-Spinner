@@ -3,10 +3,10 @@ body {
 }
 
 [id^=circle] {
-  border-left: 0px solid transparent;
-  border-right: 0px solid transparent;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
   border-top: 3px solid #a9f230;
-  border-bottom: 0px solid transparent;
+  border-bottom: 3px solid transparent;
   border-radius: 50%;
   position: absolute;
   -webkit-animation: rotate linear infinite;
@@ -21,11 +21,11 @@ body {
   width: 50px;
   top: 50px;
   left: 50px;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.85s;
+  -moz-animation-duration: 0.85s;
+  -ms-animation-duration: 0.85s;
+  -o-animation-duration: 0.85s;
+  animation-duration: 0.85s;
 }
 
 [id=circle-2] {
@@ -33,11 +33,11 @@ body {
   width: 75px;
   top: 38px;
   left: 38px;
-  -webkit-animation-duration: 1.1s;
-  -moz-animation-duration: 1.1s;
-  -ms-animation-duration: 1.1s;
-  -o-animation-duration: 1.1s;
-  animation-duration: 1.1s;
+  -webkit-animation-duration: 0.95s;
+  -moz-animation-duration: 0.95s;
+  -ms-animation-duration: 0.95s;
+  -o-animation-duration: 0.95s;
+  animation-duration: 0.95s;
 }
 
 [id=circle-3] {
@@ -45,11 +45,11 @@ body {
   width: 100px;
   top: 25px;
   left: 25px;
-  -webkit-animation-duration: 1.15s;
-  -moz-animation-duration: 1.15s;
-  -ms-animation-duration: 1.15s;
-  -o-animation-duration: 1.15s;
-  animation-duration: 1.15s;
+  -webkit-animation-duration: 1.05s;
+  -moz-animation-duration: 1.05s;
+  -ms-animation-duration: 1.05s;
+  -o-animation-duration: 1.05s;
+  animation-duration: 1.05s;
 }
 
 #button {
@@ -115,6 +115,15 @@ body {
   cursor: pointer;
 }
 
+[class^=end] {
+  -webkit-animation: 0.1s linear 1;
+  -moz-animation: 0.1s linear 1;
+  -ms-animation: 0.1s linear 1;
+  -o-animation: 0.1s linear 1;
+  animation: 0.1s linear 1;
+  border-top: 3px solid white;
+}
+
 @-moz-keyframes rotate {
   from {
     -moz-transform: rotate(360deg);
@@ -171,12 +180,4 @@ body {
   to {
     transform: rotate(0deg);
   }
-}
-
-[class^=end] {
-  -webkit-animation: 0.15s linear 1;
-  -moz-animation: 0.15s linear 1;
-  -ms-animation: 0.15s linear 1;
-  -o-animation: 0.15s linear 1;
-  animation: 0.15s linear 1;
 }
