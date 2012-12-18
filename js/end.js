@@ -11,15 +11,21 @@ $('#button').on('click', function(e) {
     if ($(this).cls('paused', 'has')) {
         $(this).html('Start');
 
+        // Loop over each item w/ID starting w/circle
         $('[id^=circle]').loop(function(e) {
             var rotate = getRotationDegrees($(e));
             if (rotate < 0) {
                 rotate = 360 + rotate;
             }
 
+            // Generate dynamic keyframe
             var keyframes = '@-' + prefix + '-keyframes end-' + rotate + ' { '+
-                'from {-' + prefix + '-transform:rotate( ' + rotate + 'deg ) } '+
-                'to {-' + prefix + '-transform:rotate( 0deg ) }'+
+                'from {' +
+                    '-' + prefix + '-transform: rotate( ' + rotate + 'deg ); ' +
+                    'border-top: 3px solid #a9f230; } '+
+                'to {' +
+                    '-' + prefix + '-transform: rotate( 0deg ); ' +
+                    'border-top: 3px solid white; }'+
                 '}';
 
             var keyframeClassName = 'end-' + rotate;
