@@ -1,6 +1,14 @@
 body {
   background: #111;
 }
+body.paused {
+  -webkit-animation: background 0.1s linear 1;
+  -moz-animation: background 0.1s linear 1;
+  -ms-animation: background 0.1s linear 1;
+  -o-animation: background 0.1s linear 1;
+  animation: background 0.1s linear 1;
+  background: #7eb524;
+}
 
 [id^=circle] {
   border-left: 3px solid transparent;
@@ -179,5 +187,55 @@ body {
 
   to {
     transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes background {
+  from {
+    background: #111;
+  }
+
+  to {
+    background: #7eb524;
+  }
+}
+
+@-webkit-keyframes background {
+  from {
+    background: #111;
+  }
+
+  to {
+    background: #7eb524;
+  }
+}
+
+@-o-keyframes background {
+  from {
+    background: #111;
+  }
+
+  to {
+    background: #7eb524;
+  }
+}
+
+@-ms-keyframes background {
+  from {
+    background: #111;
+  }
+
+  to {
+    background: #7eb524;
+  }
+}
+
+@keyframes background {
+  from {
+    background: #111;
+  }
+
+  to {
+    background: #7eb524;
   }
 }
